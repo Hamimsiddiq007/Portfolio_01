@@ -10,7 +10,7 @@ const Services = () => {
 
       <p className='text-center mx-auto max-w-2xl mt-5 mb-12 font-ovo'>I am a frontend developer from California, USA with 10 years of experience in multiple companies like Microsoft, Tesla and Apple.</p>
 
-      <div className="grid lg:grid-cols-4 grid-cols-1 gap-6 my-10">
+      <div className="grid grid-cols-auto gap-6 my-10">
         {serviceData.map(({icon, title, description, link}, index) => (
           <div key={index} className="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500">
             <Image src={icon} alt='Icon' className='w-10'/>

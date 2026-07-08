@@ -12,6 +12,16 @@ const Contact = () => {
       <p className="text-center mx-auto max-w-2xl mt-5 mb-12 font-ovo">
         I would love to hear from you! If you have any questions, comments or feedback, please use the form below.
       </p>
+
+      <form>
+        <div className="">
+            <input type="text" placeholder="Enter your name" required />
+            <input type="email" placeholder="Enter your email" required />
+        </div>
+        <textarea rows="6" placeholder="Enter your message"></textarea>
+
+        <button type="submit">Submit now</button>
+      </form>
     </div>
   );
 };

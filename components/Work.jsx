@@ -10,7 +10,7 @@ const Work = () => {
 
       <p className='text-center mx-auto max-w-2xl mt-5 mb-12 font-ovo'>Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.</p>
 
-      <div className="grid lg:grid-cols-4 grid-cols-1 gap-5 my-10">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-cols-1 gap-5 my-10">
         {workData.map((project, index) => (
             <div key={index} style={{backgroundImage: `url(${project.bgImage})`}} className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
                 <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
@@ -25,6 +25,8 @@ const Work = () => {
             </div>
         ))}
       </div>
+
+      <a className='w-max flex items-center gap-2 justify-center text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-gray-300 duration-500' href="">Show more <Image src={assets.right_arrow_bold} alt='Arrow' className='w-4'/></a>
     </div>
   )
 }

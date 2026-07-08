@@ -15,23 +15,20 @@ export default function Home() {
   useEffect(() => {
   const savedTheme = localStorage.getItem("theme");
 
-  if (
-    savedTheme === "dark" ||
-    (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches)
-  ) {
+  if (savedTheme === "dark") {
     setIsDarkMode(true);
   }
 }, []);
 
   useEffect(() => {
-    if(isDarkMode){
-      document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-    }else{
-      document.documentElement.classList.remove('dark');
-      localStorage.theme = '';
-    }
-  }, [isDarkMode]);
+  if (isDarkMode) {
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.removeItem("theme");
+  }
+}, [isDarkMode]);
 
   return (
     <>

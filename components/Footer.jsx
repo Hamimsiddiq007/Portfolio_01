@@ -14,9 +14,9 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="">
+      <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
         <p>@ 2026 Hamim Siddiq. All rights reserved</p>
-        <ul>
+        <ul className='flex items-center justify-center gap-10 mt-4 sm:mt-0'>
             <li><a target='_blank' href="https://github.com/Hamimsiddiq007">Github</a></li>
             <li><a target='_blank' href=" https://www.linkedin.com/in/hamim-siddik-6a904b3a9">LinkedIn</a></li>
             <li><a target='_blank' href="#">Twitter</a></li>

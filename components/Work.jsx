@@ -2,7 +2,7 @@ import { assets, workData } from '@/assets/assets'
 import Image from 'next/image'
 import React from 'react'
 
-const Work = () => {
+const Work = ({isDarkMode}) => {
   return (
     <div id='work' className='w-full px-[12%] scroll mt-20'>
       <h4 className='text-center mb-2 text-lg font-ovo'>My Portfolio</h4>
@@ -10,7 +10,7 @@ const Work = () => {
 
       <p className='text-center mx-auto max-w-2xl mt-5 mb-12 font-ovo'>Welcome to my web development portfolio! Explore a collection of projects showcasing my expertise in front-end development.</p>
 
-      <div className="grid grid-cols-auto gap-5 my-10">
+      <div className="grid grid-cols-auto gap-5 my-10 dark:text-black">
         {workData.map((project, index) => (
             <div key={index} style={{backgroundImage: `url(${project.bgImage})`}} className="aspect-square bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
                 <div className="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
@@ -26,7 +26,7 @@ const Work = () => {
         ))}
       </div>
 
-      <a className='w-max flex items-center gap-2 justify-center text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-gray-300 duration-500' href="">Show more <Image src={assets.right_arrow_bold} alt='Arrow' className='w-4'/></a>
+      <a className='w-max flex items-center gap-2 justify-center text-gray-700 border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-20 hover:bg-gray-300 duration-500 dark:text-white dark:border-white dark:hover:bg-dark-hover' href="">Show more <Image src={isDarkMode ? assets.right_arrow_white : assets.right_arrow_bold} alt='Arrow' className='w-4'/></a>
     </div>
   )
 }

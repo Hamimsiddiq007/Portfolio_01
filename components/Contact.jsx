@@ -32,7 +32,7 @@ const Contact = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="contact"
-      className='w-full px-[12%] scroll mt-20 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'
+      className='w-full px-[12%] scroll mt-6 bg-[url("/footer-bg-color.png")] bg-no-repeat bg-center bg-[length:90%_auto] dark:bg-none'
     >
       <motion.h4
         initial={{ opacity: 0, y: -20 }}
@@ -93,7 +93,7 @@ const Contact = () => {
         <motion.textarea
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.3 }}
+          transition={{ duration: 0.6, delay: 1.1 }}
           rows="6"
           placeholder="Enter your message"
           name="message"

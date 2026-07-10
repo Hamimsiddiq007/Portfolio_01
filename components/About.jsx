@@ -7,7 +7,7 @@ const About = ({ isDarkMode }) => {
   return (
     <motion.div
       id="about"
-      className="w-full px-[12%] scroll mt-20"
+      className="w-full px-[12%] scroll mt-2"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -62,13 +62,13 @@ const About = ({ isDarkMode }) => {
 
           <motion.ul
             initial={{ opacity: 0, y: -20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
           >
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <motion.li
-                whileHover={{scale: 1.05}}
+                whileHover={{ scale: 1.05 }}
                 className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-light-hover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-dark-hover"
                 key={index}
               >
